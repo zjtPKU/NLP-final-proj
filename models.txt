@@ -1,0 +1,8 @@
+Bio + Difficult + Accepted
+
+gpt-4o-2024-11-20, 36.09, 35.50, 33.14
+claude-3-5-sonnet-20241022, 
+gemini-1.5-pro-002, 35.50, 34.91, 35.50
+QwQ-32B-Preview 17.16, 13.61, 14.79
+o1-mini  饱和了
+DeepSeek-V2.5, 28.99, 29.59, 30.18

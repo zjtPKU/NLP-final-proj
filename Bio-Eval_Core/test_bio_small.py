@@ -128,3 +128,4 @@ if __name__ == "__main__":
     save_path = file_path.replace(".json", "") + f"_{model}_result.json"
     with open(save_path, 'w', encoding="utf-8") as f:
         f.write(json.dumps(results, ensure_ascii=False, indent=2))
+

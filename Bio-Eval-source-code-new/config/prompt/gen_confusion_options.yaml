@@ -1,0 +1,41 @@
+prompt_format:
+  - |
+   input_description:
+   - You will be given:
+         - A question with a set of answer options.
+         - The correct answer.
+
+   guidelines:
+   1. generate_distractor:
+         - It must be an incorrect answer (not the correct one).
+         - The distractor must not repeat any of the existing answer options.
+         - Ensure that the distractor is **completely unique** compared to all existing answer options, including the correct answer.
+         - To ensure uniqueness, after generating the distractor, check that it does not exactly match any existing answer options (including the correct answer).
+         - The distractor must introduce a subtle yet significant mathematical difference, while maintaining the structure of the original formula.
+         - Avoid formatting discrepancies (e.g., unnecessary spaces, misplaced symbols, etc.) that would make the distractor visually inconsistent with the other options.
+         - The distractor should involve slight changes to coefficients, powers, or other variables while keeping the structure close to the original options.
+
+   2. uniqueness_check:
+         - Implement a **final uniqueness check**: After generating the distractor, compare it with the list of existing answer options (including the correct answer).
+         - If the distractor **matches** any of the existing options, discard it and regenerate a new distractor.
+         - This check must ensure that the generated distractor is **mathematically incorrect** but visually plausible, not simply a variation of the correct answer or any other existing option.
+
+   3. similarity_and_contrast:
+         - The distractor should have a similar visual structure to the existing answer options (e.g., fraction format, variable powers, etc.).
+         - Ensure that the distractor is mathematically incorrect but similar in format, so it looks like a plausible alternative.
+         - The distractor should introduce a logical contrast, such as a minor algebraic error, but still appear valid on a surface level.
+
+   output_format:
+   - Directly output the distractor in the following format:
+         - ```<distractor> your generated distractor here </distractor>```
+         - Do not include any other information or options.
+         - Do not add any explanations or context.
+
+   input:
+   Question:
+   {}
+
+   Answer Options:
+   {}
+
+   output:

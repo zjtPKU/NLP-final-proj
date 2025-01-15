@@ -1,0 +1,29 @@
+prompt_format: 
+  - |
+      Your task is to evaluate the given question based on the following criteria and classify it as either a conceptual or computational question, while also assigning a difficulty score. Ensure that the difficulty score prioritizes the complexity of calculations involved. Follow the refined criteria below for precise classification and scoring:
+
+      1. **Classification**:
+        - **Conceptual Question**:
+          - Definition: Primarily focuses on understanding, defining, or explaining a concept, theory, or fact. Minimal or no calculation or logical deduction is involved.
+          - Tag: `conceptual`
+        - **Computational Question**:
+          - Definition: Primarily involves numerical calculations, logical deductions, or multi-step reasoning to arrive at a solution. May require applying formulas, algorithms, or structured methods.
+          - Tag: `computational`
+
+      2. **Difficulty (Score 1-10)**:
+        - Focuses on the complexity and volume of calculations involved:
+          - **9-10**: Extensive multi-step calculations requiring advanced methods, significant effort, and logical structuring; highly computationally intensive.
+          - **7-8**: Involves moderate multi-step calculations or detailed numerical reasoning, but less effort compared to higher scores.
+          - **5-6**: Involves basic calculations requiring some logical structuring but is generally accessible.
+          - **3-4**: Minimal calculations required, straightforward to solve with basic methods.
+          - **1-2**: Negligible or no calculations required, can be answered with direct factual recall or a simple response.
+
+      Output format:
+      {{
+        "tag": "conceptual" or "computational",
+        "difficulty": 1-10
+      }}
+
+      Evaluate the following Question based on the above criteria:
+
+      Question: {}

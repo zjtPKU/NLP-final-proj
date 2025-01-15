@@ -1,0 +1,69 @@
+prompt_format: 
+  - |
+    Your task is to evaluate the given question based on the following criteria with precise distinctions. The output should include two sections: quality and difficulty. Please follow the refined scoring standards below to ensure a nuanced evaluation:
+
+    1. Quality (Score 1-10): Evaluate clarity and completeness, with emphasis on whether the question is unambiguous and self-contained, allowing for a complete answer without additional information.
+      - 9-10: Perfectly clear, precise, and self-contained; no ambiguity, and the question is structured for direct interpretation and response without requiring extra clarification.
+      - 7-8: Mostly clear and understandable; minimal ambiguity, mostly complete, though minor clarifications could improve precision.
+      - 5-6: Understandable but lacks some clarity; noticeable ambiguity or minor gaps, which could require clarification to ensure an accurate response.
+      - 3-4: Considerable ambiguity or missing elements; requires significant interpretation, and clarity issues make answering more challenging.
+      - 1-2: Very unclear, vague, or incomplete; difficult to interpret or impossible to answer as stated.
+
+    2. Difficulty (Score 1-10): Emphasize the complexity of reasoning and calculation involved, prioritizing questions that demand logical deduction, multi-step reasoning, or computation.
+      - 9-10: Highly complex; requires deep logical reasoning or advanced multi-step calculations, often involving abstract thinking or intricate connections between concepts.
+      - 7-8: Moderately complex; involves structured logical reasoning or multi-step calculations, requiring familiarity with specific concepts or methods but not exhaustive detail.
+      - 5-6: Some complexity; accessible with general knowledge but involves basic reasoning or simple calculations beyond a straightforward answer.
+      - 3-4: Limited complexity; can be answered with basic understanding or minimal calculation, requiring little to no logical structuring.
+      - 1-2: Very simple; no reasoning or calculation required, can be answered with basic, factual knowledge without any analytical depth.
+
+    Please reply strictly in the following format and do not include other content:
+
+    {{
+      "quality": 1-10,
+      "difficulty": 1-10,
+    }}
+
+    Evaluate the following Question based on the above criteria:
+
+    Question: {}
+        
+    Output format example:
+    {{
+      "quality": 8,
+      "difficulty": 8,
+    }}
+    
+prompt_format_zh:
+  - |
+    你的任务是根据以下标准，对给定的问题进行精确的评估。输出应包括两个部分：质量和难度。请遵循以下细化的评分标准，以确保评估的细致性：
+
+    1. 质量 (评分 1-10): 评估问题的清晰度和完整性，着重于问题是否明确且自包含，能否在不需要额外信息的情况下得到完整的答案。
+      - 9-10: 完全清晰、精准且自包含；无歧义，问题结构合理，能够直接解释和回答，无需额外澄清。
+      - 7-8: 基本清晰且易于理解；歧义很少，基本完整，尽管小的澄清可能有助于提高精确性。
+      - 5-6: 可理解但缺乏一定清晰度；存在显著的歧义或细微缺失，可能需要澄清以确保准确回答。
+      - 3-4: 相当模糊或缺失元素；需要大量解释，清晰度问题增加回答难度。
+      - 1-2: 非常不清晰、模糊或不完整；难以解释或无法直接回答。
+
+    2. 难度 (评分 1-10): 强调推理和计算的复杂性，优先考虑那些需要逻辑推理、多步骤推理或计算的问题。
+      - 9-10: 非常复杂；需要深度的逻辑推理或高级的多步骤计算，通常涉及抽象思维或复杂的概念连接。
+      - 7-8: 中等复杂度；涉及结构化的逻辑推理或多步骤计算，需熟悉特定概念或方法，但不要求详尽细节。
+      - 5-6: 有一定复杂性；通常只需一般知识，但涉及基本的推理或简单计算，不是直接回答即可。
+      - 3-4: 复杂性有限；凭基本理解或少量计算即可回答，无需逻辑结构。
+      - 1-2: 非常简单；无推理或计算要求，凭基础知识即可回答，无需分析深度。
+
+    请严格按以下格式回复，不要包含其他内容：
+
+    {{
+      "quality": 1-10,
+      "difficulty": 1-10,
+    }}
+
+    根据以上标准，对以下问题进行评估：
+
+    问题: {}
+
+    输出格式示例:
+    {{
+      "quality": 8,
+      "difficulty": 8,
+    }}
